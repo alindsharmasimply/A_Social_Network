@@ -5,6 +5,8 @@ ob_start(); // Starts the output buffering
 
 session_start(); // Starts a session which allows to store the session values of variables
 
+
+$timezone = date_default_timezone_set('Asia/Kolkata');
 // This is how we establish a connection with the database
 $con = mysqli_connect("localhost", "root", "", "social_network");
 // Syntax: mysqli_connect(host, username, password, Database name)
