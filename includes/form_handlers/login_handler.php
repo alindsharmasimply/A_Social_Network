@@ -21,9 +21,6 @@ if (isset($_POST['login_button'])) {
 			$reopen_account = mysqli_query($con, "UPDATE users SET user_closed = 'no' WHERE email = '$email'");
 		}
 
-
-
-
 		$_SESSION['$username'] = $username; // To Log-in a user
 		header("Location: index.php"); // To redirect to page index.php after the log-in is done
 		exit();

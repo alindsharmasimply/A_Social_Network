@@ -13,28 +13,38 @@ require 'includes/form_handlers/login_handler.php';
 <html>
 <head>
 	<title>Welcome to Amity Social Network</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 </head>
-<body>
 
-	<form action="register.php" method="POST">
-		<input type="email" name="log_email" placeholder="Email Address" value=
-		"<?php
-		{ // Restoring the input fields in case if the session gets failed
-			if(isset($_SESSION['log_email']))
-			{
-				echo $_SESSION['log_email'];
+<body>
+	<div class="wrapper">
+
+	<div class="login_box">
+		<div class="login_header">
+			<h1>Welcome to Ammunity</h1>
+			<span style="color: #e67e22">Login or sign up below!</span>
+		</div>
+		<!--Login form for users-->
+		<form action="register.php" method="POST">
+			<input type="email" name="log_email" placeholder="Email Address" value=
+			"<?php
+			{ // Restoring the input fields in case if the session gets failed
+				if(isset($_SESSION['log_email']))
+				{
+					echo $_SESSION['log_email'];
+				}
 			}
-		}
-		?>" required>
-		<br>
-		<input type="password" name="log_password" placeholder="Password">
-		<br>
-		<input type="submit" name="login_button" value="Login">
-		<br>
-		<?php if (in_array("Email or password was incorrect.<br>", $error_array)) {
-			echo "Email or password was incorrect.<br>";
-		} ?>
-	</form>
+			?>" required>
+			<br>
+			<input type="password" name="log_password" placeholder="Password">
+			<br>
+			
+			<?php if (in_array("Email or password was incorrect.<br>", $error_array)) {
+				echo "Email or password was incorrect.<br>";
+			} ?>
+			<input type="submit" name="login_button" value="Login">
+			<br>
+		</form>
 
 <!--Registration form for users-->
 	<form action="register.php" method="POST">
@@ -131,6 +141,8 @@ require 'includes/form_handlers/login_handler.php';
 		?>
 
 	</form>
-
+</div>
+</div>
 </body>
+
 </html>
