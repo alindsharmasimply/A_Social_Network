@@ -19,6 +19,21 @@ require 'includes/form_handlers/login_handler.php';
 </head>
 
 <body>
+	<?php 
+	// To show the errors without transitioning to other form
+	if (isset($_POST['register_button'])) {
+		echo '
+		<script>
+
+		$(document).ready(function(){
+			$("#first").hide();
+			$("#second").show();
+			});
+
+		</script>
+		';
+	}
+	 ?>
 	<div class="wrapper">
 
 	<div class="login_box">
