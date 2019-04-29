@@ -1,10 +1,8 @@
+<?php 
+include("includes/header.php");
+session_destroy(); // Destroys the older session i.e., logs out
+ ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Welcome to Ammunity</title>
-</head>
-<body>
 	<h1>Time has come</h1>
 </body>
 </html>

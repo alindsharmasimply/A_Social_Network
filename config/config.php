@@ -1,7 +1,7 @@
 <?php
 
 ob_start(); // Starts the output buffering
-// Basically stores the output in an internal buffer
+// Basically stores the output of the php code in an internal buffer
 
 session_start(); // Starts a session which allows to store the session values of variables
 
