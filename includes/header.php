@@ -49,3 +49,4 @@ else // Take the user to the landing page
 			<a href="#"><i class="fas fa-cog"></i></a>
 		</nav>
 	</div>
+	<div class="wrapper">
