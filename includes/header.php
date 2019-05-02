@@ -47,6 +47,7 @@ else // Take the user to the landing page
 			<a href="#"><i class="far fa-bell"></i></a>
 			<a href="#"><i class="fas fa-users"></i></a>
 			<a href="#"><i class="fas fa-cog"></i></a>
+			<a href="includes/handlers/logout.php"><i class="fas fa-sign-out-alt"></i></a>
 		</nav>
 	</div>
 	<div class="wrapper">
