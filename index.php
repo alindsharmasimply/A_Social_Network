@@ -1,5 +1,15 @@
 <?php 
 include("includes/header.php");
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
+
+
+if (isset($_POST['post'])) {
+	$post = new Post($con, $userLoggedIn);
+	$post->submitPost($_POST['post_text'], 'none');
+}
+
+
 //session_destroy(); // Destroys the older session i.e., logs out
  ?>
 
@@ -27,6 +37,13 @@ include("includes/header.php");
 		<input type="submit" name="post" id="post_button" value="Post">
 		<hr>
 	</form>
+	<?php
+
+	// Creating the User class object in order to call its functions
+	$user_obj = new User($con, $userLoggedIn);
+	echo $user_obj->getFirstAndLastName();
+
+	 ?>
 </div>
 </div>
 </body>
