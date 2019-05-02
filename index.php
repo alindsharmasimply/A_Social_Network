@@ -5,11 +5,11 @@ include("includes/header.php");
 
 <div class="user_details column">
 	<!--To display the profile pic, the location of which is extracted from the database-->
-	<a href="#" >
+	<a href="<?php echo $userLoggedIn; ?>" >
 		<img src="<?php echo $user['profile_pic']; ?>">
 	</a>
 	<div class="user_details_left_right">
-	<a>
+	<a href="<?php echo $userLoggedIn; ?>">
 		<?php
 		echo $user['first_name'] . " " . $user['last_name'];
 		?>
