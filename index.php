@@ -39,9 +39,9 @@ if (isset($_POST['post'])) {
 	</form>
 	<?php
 
-	// Creating the User class object in order to call its functions
-	$user_obj = new User($con, $userLoggedIn);
-	echo $user_obj->getFirstAndLastName();
+	// Creating the 'Post' class object in order to call its functions
+	$post = new Post($con, $userLoggedIn);
+	$post->loadPostsFriends();
 
 	 ?>
 </div>
